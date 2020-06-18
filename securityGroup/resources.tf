@@ -1,7 +1,5 @@
 provider "aws" {
   region = "us-west-2"
-  access_key = "${var.AccessKey}"
-  secret_key = "${var.SecretKey}"
 }
 
 

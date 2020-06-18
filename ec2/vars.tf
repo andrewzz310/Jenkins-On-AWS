@@ -10,14 +10,6 @@ variable "VpcId" {
   description = "VPC ID to use"
 }
 
-variable "AccessKey" {
-  description = "Access Key of the IAM User/Role to use for deployment of Resources"
-}
-
-variable "SecretKey" {
-  type = "string"
-  description = "Secret Key of the IAM User/Role to use for deployment of Resources"
-}
 
 variable "Ec2Name" {
   type = "string"
