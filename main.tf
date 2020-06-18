@@ -6,7 +6,6 @@ module "SecurityGroup" {
   SecretKey = "${var.SecretKey}"
   SgName = "JenkinsEc2Sg"
   LocalIp = "${var.LocalIp}"
-
 }
 
 #Jenkins Server to be Created
@@ -20,6 +19,7 @@ module "jenkinsServer" {
   KeyName = "${var.KeyName}"
   SubnetId = "subnet-d4ba869f"
   SecurityGroupCreated = "${module.SecurityGroup.SecurityGroupCreated}"
-
 }
+
+
 

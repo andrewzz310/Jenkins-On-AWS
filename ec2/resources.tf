@@ -23,6 +23,13 @@ data "aws_ami" "UbuntuLatest"  {
 
 }
 
+data "local_file" "InstallJenkins" {
+  filename = "${path.module}/InstallJenkins.sh"
+}
+
+
+
+
 #EC2 Instance
 resource "aws_instance" "JenkinsServer" {
   ami = "${data.aws_ami.UbuntuLatest.id}"
@@ -30,6 +37,7 @@ resource "aws_instance" "JenkinsServer" {
   key_name = "${var.KeyName}"
   subnet_id = "${var.SubnetId}"
   vpc_security_group_ids = ["${var.SecurityGroupCreated}"]
+  user_data = "${data.local_file.InstallJenkins.content}"
 
   tags = {
     Name = "${var.Ec2Name}"

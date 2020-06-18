@@ -27,9 +27,9 @@ resource "aws_security_group" "Ec2AccessLocal" {
     cidr_blocks = ["${var.LocalIp}"]
   }
   ingress {
-    description = "Incoming HTTPS"
-    from_port = 443
-    to_port = 443
+    description = "Incoming Jenkins"
+    from_port = 8080
+    to_port = 8080
     protocol = "tcp"
     cidr_blocks = ["${var.LocalIp}"]
   }

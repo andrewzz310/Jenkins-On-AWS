@@ -11,7 +11,6 @@ variable "VpcId" {
 }
 
 variable "AccessKey" {
-  type = "string"
   description = "Access Key of the IAM User/Role to use for deployment of Resources"
 }
 
