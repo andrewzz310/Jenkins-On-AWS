@@ -34,7 +34,7 @@ Entries for your .tfvars should include the following values for you to fill in:
 ```hcl
 VpcId = ""
 VpcCidr = ""
-LocalIp = "" #this is your public routable ip
+LocalIp = "" #this is your public routable ip CIDR
 KeyName = ""
 ```
 ### Deployment
