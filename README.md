@@ -21,11 +21,9 @@ $ aws --version
 $ aws configure
 ```
 
-> Verify Terraform is installed correctly, create environment variables for access/secret key from your IAM user and Create Entries for your private parameters in your terraform.tfvars file
+> Verify Terraform is installed correctly, Create Entries for your private parameters in your terraform.tfvars file
 ```shell
 $ terraform --version
-$ export AWS_ACCESS_KEY_ID="youraccesskey"
-$ export AWS_SECRET_ACCESS_KEY="yoursecretkey"
 $ cd Jenkins-On-AWS
 $ touch terraform.tfvars
 ```
